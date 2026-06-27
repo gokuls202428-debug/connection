@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Connection 2026 - Admin Dashboard</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="admin-container">
+
+    <!-- ================= HEADER ================= -->
+
+    <div class="admin-header">
+
+        <div>
+
+            <h1>CONNECTION 2026</h1>
+
+            <p>Administrator Dashboard</p>
+
+        </div>
+
+        <button id="logoutBtn" class="logout-btn">
+
+            Logout
+
+        </button>
+
+    </div>
+
+
+
+
+
+    <!-- ================= EVENT STATUS ================= -->
+
+    <div class="dashboard-card">
+
+        <h2>Event Control</h2>
+
+        <div class="status-grid">
+
+            <div class="status-box">
+
+                <h3>Current Round</h3>
+
+                <p id="currentRound">
+
+                    Round 1
+
+                </p>
+
+            </div>
+
+            <div class="status-box">
+
+                <h3>Event Status</h3>
+
+                <p id="eventStatus">
+
+                    Waiting
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="button-group">
+
+            <button id="startRoundBtn" class="green-btn">
+
+                ▶ Start Round
+
+            </button>
+
+            <button id="endRoundBtn" class="red-btn">
+
+                ■ End Round
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- ================= TEAMS ================= -->
+
+    <div class="dashboard-card">
+
+        <div class="card-title">
+
+            <h2>Registered Teams</h2>
+
+            <button id="refreshTeams" class="blue-btn">
+
+                Refresh
+
+            </button>
+
+        </div>
+
+        <table class="team-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>Login ID</th>
+
+                    <th>Team Name</th>
+
+                    <th>Round</th>
+
+                    <th>Status</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="teamTable">
+
+                <tr>
+
+                    <td>Loading...</td>
+
+                    <td>-</td>
+
+                    <td>-</td>
+
+                    <td>-</td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+
+
+
+    <!-- ================= ROUND CONTROL ================= -->
+
+    <div class="dashboard-card">
+
+        <h2>Round Control</h2>
+
+        <div class="round-grid">
+
+            <button class="round-btn" id="round1">
+
+                Round 1
+
+            </button>
+
+            <button class="round-btn" id="round2">
+
+                Round 2
+
+            </button>
+
+            <button class="round-btn" id="round3">
+
+                Round 3
+
+            </button>
+
+            <button class="round-btn" id="round4">
+
+                Round 4
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- ================= ANNOUNCEMENT ================= -->
+
+    <div class="dashboard-card">
+
+        <h2>Announcement</h2>
+
+        <textarea
+
+            id="announcement"
+
+            placeholder="Type announcement here..."
+
+        ></textarea>
+
+        <button
+
+            id="sendAnnouncement"
+
+            class="blue-btn"
+
+        >
+
+            Send Announcement
+
+        </button>
+
+    </div>
+
+
+
+
+
+    <!-- ================= EVENT STATS ================= -->
+
+    <div class="dashboard-card">
+
+        <h2>Statistics</h2>
+
+        <div class="stats-grid">
+
+            <div class="stat-box">
+
+                <h3>Total Teams</h3>
+
+                <p id="totalTeams">
+
+                    20
+
+                </p>
+
+            </div>
+
+            <div class="stat-box">
+
+                <h3>Logged In</h3>
+
+                <p id="loggedIn">
+
+                    0
+
+                </p>
+
+            </div>
+
+            <div class="stat-box">
+
+                <h3>Completed</h3>
+
+                <p id="completed">
+
+                    0
+
+                </p>
+
+            </div>
+
+            <div class="stat-box">
+
+                <h3>Winner</h3>
+
+                <p id="winner">
+
+                    --
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+<script src="../assets/js/admin-dashboard.js"></script>
+
+</body>
+
+</html>

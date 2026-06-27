@@ -1,0 +1,265 @@
+/* =========================================
+   CONNECTION 2026 - Round 1 Quiz CSS
+   ========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    color:#fff;
+    background:linear-gradient(135deg,#0f172a,#1d4ed8,#6d28d9);
+    overflow-x:hidden;
+}
+
+.background{
+    position:fixed;
+    inset:0;
+    background:
+      radial-gradient(circle at 20% 20%,rgba(59,130,246,.35),transparent 35%),
+      radial-gradient(circle at 80% 80%,rgba(168,85,247,.35),transparent 35%);
+    z-index:-1;
+}
+
+.quiz-container{
+    width:min(1200px,95%);
+    margin:30px auto;
+}
+
+.quiz-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
+    backdrop-filter:blur(14px);
+    border-radius:20px;
+    padding:20px;
+}
+
+.logo-box{
+    width:90px;
+    height:90px;
+    border:2px dashed rgba(255,255,255,.5);
+    border-radius:14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    font-size:14px;
+}
+
+.header-content{
+    text-align:center;
+    flex:1;
+}
+
+.header-content h1{
+    font-size:44px;
+    letter-spacing:2px;
+    text-shadow:0 0 15px #6ea8ff;
+}
+
+.header-content p{
+    opacity:.9;
+}
+
+.team-box{
+    min-width:160px;
+    text-align:center;
+    background:rgba(255,255,255,.08);
+    border-radius:14px;
+    padding:15px;
+}
+
+.status-row{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:18px;
+    margin-top:25px;
+}
+
+.status-card,
+.question-card,
+.navigator,
+.submit-section{
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(14px);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:18px;
+    padding:20px;
+}
+
+.status-card{
+    text-align:center;
+}
+
+.status-card h4{
+    color:#8fd3ff;
+    margin-bottom:10px;
+}
+
+.status-card p{
+    font-size:22px;
+    font-weight:600;
+}
+
+.progress-section{
+    margin:25px 0;
+}
+
+.progress{
+    width:100%;
+    height:16px;
+    background:rgba(255,255,255,.12);
+    border-radius:30px;
+    overflow:hidden;
+}
+
+.progress-fill{
+    width:0%;
+    height:100%;
+    background:linear-gradient(90deg,#22c55e,#38bdf8,#8b5cf6);
+    transition:.4s;
+}
+
+.question-card{
+    margin-bottom:25px;
+}
+
+.question-card h2{
+    line-height:1.6;
+    font-size:28px;
+}
+
+.options-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.option-btn{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    padding:18px;
+    border:none;
+    border-radius:16px;
+    background:rgba(255,255,255,.08);
+    color:#fff;
+    cursor:pointer;
+    transition:.3s;
+    border:2px solid transparent;
+}
+
+.option-btn span{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:#2563eb;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+}
+
+.option-btn:hover{
+    transform:translateY(-4px);
+    border-color:#38bdf8;
+    box-shadow:0 0 20px rgba(56,189,248,.35);
+}
+
+.navigation{
+    display:flex;
+    justify-content:space-between;
+    margin:30px 0;
+}
+
+.navigation button,
+#submitBtn{
+    border:none;
+    border-radius:12px;
+    padding:14px 30px;
+    font-size:18px;
+    cursor:pointer;
+    color:#fff;
+    background:linear-gradient(90deg,#2563eb,#7c3aed);
+    transition:.3s;
+}
+
+.navigation button:hover,
+#submitBtn:hover{
+    transform:scale(1.04);
+}
+
+.navigator{
+    margin-bottom:25px;
+}
+
+.navigator h3{
+    margin-bottom:15px;
+}
+
+.navigator-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:12px;
+}
+
+.navigator-grid button{
+    height:45px;
+    border:none;
+    border-radius:10px;
+    background:#334155;
+    color:#fff;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.navigator-grid button:hover{
+    background:#2563eb;
+}
+
+.submit-section{
+    text-align:center;
+}
+
+footer{
+    margin:25px 0;
+    text-align:center;
+    opacity:.85;
+}
+
+@media(max-width:900px){
+    .options-grid{
+        grid-template-columns:1fr;
+    }
+
+    .quiz-header{
+        flex-direction:column;
+    }
+
+    .header-content h1{
+        font-size:34px;
+    }
+}
+
+@media(max-width:600px){
+    .navigator-grid{
+        grid-template-columns:repeat(4,1fr);
+    }
+
+    .navigation{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .question-card h2{
+        font-size:22px;
+    }
+}
